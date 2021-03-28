@@ -14,7 +14,10 @@ class SearchHeader extends React.Component {
             The internet’s source of <strong>freely-usable images.</strong>
           </p>
           <p>
-            Powered by <a href="https://unsplash.com">Unsplah API</a>
+            Powered by{' '}
+            <a href="https://unsplash.com" target="_blank">
+              Unsplah API
+            </a>
           </p>
         </article>
         <article>

@@ -17,7 +17,7 @@ class App extends React.Component {
 
   async componentDidMount() {
     try {
-      let { data: images } = await unsplashApi.getRandomImages('doggy', 10);
+      let { data: images } = await unsplashApi.getRandomImages(10, 'doggy');
       this.setState({ images, isLoading: true });
     } catch (error) {
       console.error(error);

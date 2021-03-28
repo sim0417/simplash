@@ -6,7 +6,11 @@ class ImageItem extends React.Component {
   }
 
   render() {
-    return <div>Image Item</div>;
+    return (
+      <div className={this.props.className}>
+        <img src={this.props.imageInfo.urls.thumb} />
+      </div>
+    );
   }
 }
 

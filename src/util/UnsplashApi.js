@@ -20,11 +20,28 @@ const getImages = (per_page = 10, page = 1, order_by = 'latest') => {
   });
 };
 
-const getRandomImages = (query = null, count = 10, orientation = null) => {
+const getImageInfo = (id) => {
+  return api.get('/photos', {
+    params: { id },
+  });
+};
+
+const getRandomImages = (count = 10, query = null, orientation = null) => {
   return api.get('/photos/random', {
     params: {
       query,
       count,
+      orientation,
+    },
+  });
+};
+
+const getSearchImages = (query, page = 1, per_page = 10, orientation = null) => {
+  return api.get('/photos/random', {
+    params: {
+      query,
+      page,
+      per_page,
       orientation,
     },
   });
@@ -42,7 +59,9 @@ const unsplashApi = {
     Squarish: 'squarish',
   },
   getImages,
+  getImageInfo,
   getRandomImages,
+  getSearchImages,
 };
 
 export default unsplashApi;
