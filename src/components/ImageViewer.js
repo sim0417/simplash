@@ -10,7 +10,11 @@ class ImageViewer extends React.Component {
       <div>
         {this.props.images.length > 0 &&
           this.props.images.map((image) => {
-            return <div>Image Item</div>;
+            return (
+              <div key={image.id}>
+                <img src={image.urls.thumb} />
+              </div>
+            );
           })}
         {this.props.images.length === 0 && <div>Not found images :(</div>}
       </div>

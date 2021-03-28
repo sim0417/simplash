@@ -6,7 +6,24 @@ class SearchHeader extends React.Component {
   }
 
   render() {
-    return <section>Header</section>;
+    return (
+      <section>
+        <article>
+          <h2>SIMPLASH</h2>
+          <p>
+            The internet’s source of <strong>freely-usable images.</strong>
+          </p>
+          <p>
+            Powered by <a href="https://unsplash.com">Unsplah API</a>
+          </p>
+        </article>
+        <article>
+          <div>
+            <input type="text" value="" placeholder="Search photos" />
+          </div>
+        </article>
+      </section>
+    );
   }
 }
 
