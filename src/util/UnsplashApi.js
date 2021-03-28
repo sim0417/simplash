@@ -37,7 +37,7 @@ const getRandomImages = (count = 10, query = null, orientation = null) => {
 };
 
 const getSearchImages = (query, page = 1, per_page = 10, orientation = null) => {
-  return api.get('/photos/random', {
+  return api.get('/search/photos', {
     params: {
       query,
       page,

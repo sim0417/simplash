@@ -1,4 +1,5 @@
 import React from 'react';
+import style from '../style/searchHeader.module.scss';
 
 class SearchHeader extends React.Component {
   constructor(props) {
@@ -7,8 +8,8 @@ class SearchHeader extends React.Component {
 
   render() {
     return (
-      <section>
-        <article>
+      <section className={style.headerBody}>
+        <article className={style.headerTitle}>
           <h2>SIMPLASH</h2>
           <p>
             The internet’s source of <strong>freely-usable images.</strong>
@@ -20,10 +21,14 @@ class SearchHeader extends React.Component {
             </a>
           </p>
         </article>
-        <article>
-          <div>
-            <input type="text" value="" placeholder="Search photos" />
-          </div>
+        <article className={style.headerSearchBar}>
+          <input
+            type="text"
+            value={this.props.searchKeyword}
+            placeholder="Search photos"
+            onChange={this.props.handleSearchKeyword}
+            onKeyDown={this.props.handleSearchImage}
+          />
         </article>
       </section>
     );

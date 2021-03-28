@@ -6,7 +6,7 @@ Make image gallery with React & unsplash API
 
 - [x] Get images by unsplash API
 - [x] Make Masonry style
+- [x] Make Search function
 - [ ] Make modal window
-- [ ] Make Search function
 - [ ] Make scroll interaction
 - [ ] Make infinite scroll
